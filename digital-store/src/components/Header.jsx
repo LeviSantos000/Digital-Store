@@ -3,6 +3,9 @@ import styled from "styled-components";
 const HeaderContainer = styled.header`
     background-color: #FFFFFF;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    width: 100%
+    ;
     & #linha1 {
         display: flex;
         align-items: center;
@@ -11,7 +14,7 @@ const HeaderContainer = styled.header`
         margin: 2em;
 
         & input#barraPesquisa {
-            background-color: #f3f3f3;
+            background-color: #F3F3F3;
             border: 0;
             border-radius: 0.5em;
             width: 30em;
@@ -30,7 +33,7 @@ const HeaderContainer = styled.header`
         }
     }
 
-    & #linha2 ul {
+    & div#navegacao ul {
         display: flex;
         gap: 2em;
         list-style: none;
@@ -40,7 +43,6 @@ const HeaderContainer = styled.header`
 const Header = () => {
     return (
         <HeaderContainer>
-            <div id="header">
                 <div id="linha1">
                     <img src="logo-header.svg" alt="Logo Digital Store" />
 
@@ -52,7 +54,7 @@ const Header = () => {
                     <img src="mini-cart.svg" alt="Mini cart de compras" />
 
                 </div>
-                <div id="linha2">
+                <div id="navegacao">
 
                     <nav>
                         <ul>
@@ -63,7 +65,6 @@ const Header = () => {
                         </ul>
                     </nav>
                 </div>
-            </div>
         </HeaderContainer>
     );
 }

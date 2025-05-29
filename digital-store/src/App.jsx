@@ -10,8 +10,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<PageLayout />}>
             <Route index element={<HomePage />}/>
-            <Route path="*" element={<NotFound />}/>
           </Route>
+          <Route path="*" element={<NotFound />}/>
         </Routes>
       </BrowserRouter>
     </>
