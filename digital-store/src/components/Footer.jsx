@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const FooterContainer = styled.footer`
     background-color: #1F1F1F;
@@ -6,18 +7,19 @@ const FooterContainer = styled.footer`
     color: #FFFFFF;
     box-sizing: border-box;
     padding: 4em;
+    padding-bottom: 0.5em;
     width: 100%;
 
     & p#copyright {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     & div#footer {
         display: flex;
         justify-content: space-between;
         padding-bottom: 2em;
-        border-bottom: solid 0.1em #646464;
     }
 
     & div#logo {
@@ -95,9 +97,9 @@ const Footer = () => {
                         <img src="logo-footer.svg" alt="Logo Digital Store" />
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                         <div id="rede-social-icons">
-                            <img src="facebook.svg" alt="Ícone do Facebook" />
-                            <img src="instagram.svg" alt="Ícone do Instagram" />
-                            <img src="twitter.svg" alt="Ícone do Twitter" />
+                            <Link to="https://www.facebook.com/?locale=pt_BR" target="_blank"><img src="facebook.svg" alt="Ícone do Facebook" /></Link>
+                            <Link to="https://www.instagram.com/" target="_blank"><img src="instagram.svg" alt="Ícone do Instagram" /></Link>
+                            <Link to="https://x.com/i/flow/login" target="_blank"><img src="twitter.svg" alt="Ícone do Twitter" /></Link>
                         </div>
                     </div>
                     <div id="informacao">
@@ -127,6 +129,7 @@ const Footer = () => {
                         <p>(85) 3051-3411</p>
                     </div>
                 </div>
+                <hr />
                 <p id="copyright">@ 2022 Digital College</p>
         </FooterContainer>
     );

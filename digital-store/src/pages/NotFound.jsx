@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+import HomePage from "./HomePage";
+
 const NotFound = () => {
+
     return (
         <>
-            Aqui não tem nada
+            <p>Aqui não tem nada</p>
+            <Link to={<HomePage />}>Volte</Link>
         </>
     );
 }
